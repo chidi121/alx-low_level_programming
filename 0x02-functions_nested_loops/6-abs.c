@@ -1,11 +1,11 @@
-nclude "main.h"
+#include "main.h"
 
 /**
  * _abs - computes the absolute value of an integer
  *
  * @a: The integer to be computed
  *
- * Return: Absolute value
+ * Return: Absolute value of ab
  */
 
 int _abs(int a)
