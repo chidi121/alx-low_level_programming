@@ -1,17 +1,16 @@
 #include <stdio.h>
-#include <stdlib>
 #include <_putchar.h>
 #include <main.h>
 
 /**
- * main - Prints _putchar
+ * main - Prints putchar
  *
- * Return: Always 0 (Success)
+ * REturn: Always 0 (Success)
  */
 
 int main(void)
 {
-	char *sh = "_putchar";
+	char*sh = "_putchar";
 
 	while (*sh)
 	{
@@ -19,6 +18,7 @@ int main(void)
 		sh++;
 	}
 	_putchar('\n');
+
 
 	return (0);
 }
