@@ -2,7 +2,7 @@
 
 /**
  * main - main block
- * description: computes and printsthe sum of all the multiples of 3 or 
+ * description: computes and printsthe sum of all the multiples of 3 or
  * 5 below 1024 (excluded), followed by a new line
  * return: 0
  */
