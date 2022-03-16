@@ -4,39 +4,29 @@
 /**
  * jack_bauer - a function that prints every minutes of the day
  */
+
 void jack_bauer(void)
 {
-	int hr1 = 0;
-	int hr2 = 0;
-	int sec1 = 0;
-	int sec2 = 0;
+	int i, j, k, l;
 
-	while (hr1 < 3)
+	for (i = '0'; i <= '2'; i++)
 	{
-		while (hr2 <= 9)
+		for (j = '0'; j <= '9'; j++)
 		{
-			if (hr1 == 2 && hr2 == 4)
+			if (i == '2' && j == '4')
 				break;
-			while (sec1 < 6)
+			for (k = '0'; k <= '5'; k++)
 			{
-
-				while (sec2 <= 9)
+				for (l = '0'; l <= '9'; l++)
 				{
-					_putchar(hr1 + '0');
-					_putchar(hr2 + '0');
+					_putchar(i);
+					_putchar(j);
 					_putchar(':');
-					_putchar(sec1 + '0');
-					_putchar(sec2 + '0');
+					_putchar(k);
+					_putchar(l);
 					_putchar('\n');
-					sec2++;
 				}
-				sec2 = 0;
-				sec1++;
 			}
-			sec1 = 0;
-			hr2++;
 		}
-		hr2 = 0;
-		hr1++;
 	}
 }
