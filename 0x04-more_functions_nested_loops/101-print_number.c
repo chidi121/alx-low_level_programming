@@ -1,50 +1,37 @@
 #include "main.h"
-
 /**
- * print_number - print number
- * @n: input value
+ *print_number - prints an integer
  *
- * Description:  prints an integer
- * Return: Always (0)
+ *@n:input
+ *
+ *Return:void
+ *
+ *Description:prints an integer
+ *
  */
-
 void print_number(int n)
 {
-	if ((n < 0) && (n >= -9))
+	unsigned int x, y, count;
+
+	if (n < 0)
 	{
-		_putchar('-');
-		_putchar((n * -1) + '0');
+		_putchar(45);
+		x = -n;
 	}
-	else if (n <= -10)
+	else
 	{
-		_putchar('-');
-		_putchar(((n / 10) * -1) + '0');
-		_putchar(((n % 10)  * -1) + '0');
+		x = n;
 	}
-	else if (n == 0)
+	y = x;
+	count = 1;
+
+	while (y > 9)
 	{
-		_putchar(n + '0');
+		y /= 10;
+		count *= 10;
 	}
-	else if ((n > 0) && (n <= 9))
+	for (; count >= 1; count /= 10)
 	{
-		_putchar(n + '0');
-	}
-	else if ((n >= 10) && (n <= 99))
-	{
-		_putchar((n / 10) + '0');
-		_putchar((n % 10) + '0');
-	}
-	else if ((n >= 100) && (n <= 999))
-	{
-		_putchar((n / 100) + '0');
-		_putchar(((n / 10) % 10) + '0');
-		_putchar((n % 10) + '0');
-	}
-	else if ((n >= 1000) && (n <= 9999))
-	{
-		_putchar((n / 1000) + '0');
-		_putchar((n / 100) % 10 + '0');
-		_putchar((n / 10) % 10 + '0');
-		_putchar((n % 10) + '0');
+		_putchar(((x / count) % 10) + 48);
 	}
 }
